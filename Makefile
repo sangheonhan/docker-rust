@@ -28,14 +28,14 @@ pull:
 	docker pull sangheon/rust:$(VERSION)
 
 clean:
-	-docker rm sangheon/rust_$(VERSION)
+	-docker rm rust_$(VERSION)
 	-docker rmi sangheon/rust:$(VERSION)
 
 shell:
 	docker exec -it -u $(USERNAME) rust_$(VERSION) /bin/zsh
 
 start:
-	docker run -itd --rm --name rust_$(VERSION) -e HOST_UID=$(USER_ID) -e HOST_GID=$(GROUP_ID) sangheon/rust:$(VERSION)
+	docker run -itd --name rust_$(VERSION) -e HOST_UID=$(USER_ID) -e HOST_GID=$(GROUP_ID) sangheon/rust:$(VERSION)
 	$(MAKE) log
 
 stop:
