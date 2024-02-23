@@ -2,7 +2,7 @@
 
 ## Rust Development Environment Docker Container
 
-This repository contains a Dockerfile and a Makefile for setting up a Rust development environment in a container, based on `sangheon/sandbox:24.04`, with Rust version defined in `.env` as `VERSION=1.76.0`.
+This repository contains a Dockerfile and a Makefile for setting up a Rust development environment in a container.
 
 ### Prerequisites
 
