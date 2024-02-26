@@ -4,7 +4,7 @@ ARG VERSION=stable
 ARG TARGETOS
 ARG TARGETARCH
 
-RUN su -c - ubuntu sh -c "\
+RUN sudo -u app bash -c "\
 TARGET=''; \
 if [ \"${TARGETOS}\" = 'linux' ] && [ \"${TARGETARCH}\" = 'amd64' ]; then \
     TARGET='x86_64-unknown-linux-gnu'; \
